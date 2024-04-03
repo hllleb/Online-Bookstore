@@ -1,4 +1,4 @@
-﻿@model Book
+﻿@model BookViewModel
 
 <h2>Edit Book</h2>
 
@@ -13,6 +13,10 @@
         <label asp-for="Author"></label>
         <input asp-for="Author" class="form-control" />
     </div>
-    <!-- Add other input fields... -->
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    <a class="btn btn-secondary" asp-action="Index">Cancel</a>
 </form>

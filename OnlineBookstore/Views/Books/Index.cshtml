@@ -1,13 +1,14 @@
-﻿@model IList<Book>
+﻿@model IList<BookViewModel>
 
 <h2>Books</h2>
 
+<a class="btn btn-primary" asp-action="Create">Add</a>
 <table class="table">
     <thead>
     <tr>
         <th>Title</th>
         <th>Author</th>
-        <!-- Other book properties... -->
+        <th>Price</th>
         <th>Actions</th>
     </tr>
     </thead>
@@ -17,7 +18,7 @@
         <tr>
             <td>@book.Title</td>
             <td>@book.Author</td>
-            <!-- Display other book properties... -->
+            <td>@book.Price</td>
             <td>
                 <a asp-action="Details" asp-route-id="@book.Id">Details</a> |
                 <a asp-action="Edit" asp-route-id="@book.Id">Edit</a> |

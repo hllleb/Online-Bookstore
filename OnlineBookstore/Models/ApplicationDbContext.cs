@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace OnlineBookstore.Models;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
@@ -13,4 +14,6 @@ public class ApplicationDbContext : DbContext
     public DbSet<Category> Categories { get; set; }
     
     public DbSet<Order> Orders { get; set; }
+
+    public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 }

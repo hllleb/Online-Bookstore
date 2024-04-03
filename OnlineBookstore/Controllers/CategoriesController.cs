@@ -3,11 +3,11 @@ using OnlineBookstore.Models;
 
 namespace OnlineBookstore.Controllers;
 
-public class CategoryController : Controller
+public class CategoriesController : Controller
 {
     private readonly ApplicationDbContext context;
 
-    public CategoryController(ApplicationDbContext context)
+    public CategoriesController(ApplicationDbContext context)
     {
         this.context = context;
     }
